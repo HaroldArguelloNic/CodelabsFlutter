@@ -22,7 +22,9 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  // TODO: Add text editing controllers (101)
+  //  Add text editing controllers (101)
+  final _usernameController = TextEditingController();
+  final _passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,9 +41,51 @@ class _LoginPageState extends State<LoginPage> {
               ],
             ),
             const SizedBox(height: 120.0),
-            // TODO: Remove filled: true values (103)
-            // TODO: Add TextField widgets (101)
-            // TODO: Add button bar (101)
+            //  Remove filled: true values (103)
+            // : Add TextField widgets (101)
+            TextField(
+              controller: _usernameController,
+              decoration: const InputDecoration(
+                filled: true,
+                labelText: 'Username',
+              ),
+            ),
+            // spacer
+            const SizedBox(height: 12.0),
+            // [Password]
+            TextField(
+              controller: _passwordController,
+              decoration: const InputDecoration(
+                filled: true,
+                labelText: 'Password',
+              ),
+              obscureText: true,
+            ),
+            //  Add button bar (101)
+            OverflowBar(
+              alignment: MainAxisAlignment.end,
+              //  Add a beveled rectangular border to CANCEL (103)
+              children: <Widget>[
+                //  Add buttons (101)
+                TextButton(
+                  child: const Text('CANCEL'),
+                  onPressed: () {
+                    //  Clear the text fields (101)
+                    _usernameController.clear();
+                    _passwordController.clear();
+                  },
+                ),
+                // Add an elevation to NEXT (103)
+                //  Add a beveled rectangular border to NEXT (103)
+                ElevatedButton(
+                  child: const Text('NEXT'),
+                  onPressed: () {
+                    //  Show the next page (101)
+                    Navigator.pop(context);
+                  },
+                ),
+              ],
+            ),
           ],
         ),
       ),
