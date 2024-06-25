@@ -37,7 +37,10 @@ class _LoginPageState extends State<LoginPage> {
               children: <Widget>[
                 Image.asset('assets/diamond.png'),
                 const SizedBox(height: 16.0),
-                const Text('SHRINE'),
+                Text(
+                  'SHRINE',
+                  style: Theme.of(context).textTheme.headlineSmall,
+                ),
               ],
             ),
             const SizedBox(height: 120.0),
@@ -46,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
             TextField(
               controller: _usernameController,
               decoration: const InputDecoration(
-                filled: true,
+                //remove filled: true,
                 labelText: 'Username',
               ),
             ),
@@ -56,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
             TextField(
               controller: _passwordController,
               decoration: const InputDecoration(
-                filled: true,
+                //remove filled: true,
                 labelText: 'Password',
               ),
               obscureText: true,
@@ -68,21 +71,26 @@ class _LoginPageState extends State<LoginPage> {
               children: <Widget>[
                 //  Add buttons (101)
                 TextButton(
-                  child: const Text('CANCEL'),
                   onPressed: () {
                     //  Clear the text fields (101)
                     _usernameController.clear();
                     _passwordController.clear();
                   },
+                  style: TextButton.styleFrom(
+                    foregroundColor: Theme.of(context).colorScheme.secondary,
+                  ),
+                  child: const Text('CANCEL'),
                 ),
                 // Add an elevation to NEXT (103)
                 //  Add a beveled rectangular border to NEXT (103)
                 ElevatedButton(
-                  child: const Text('NEXT'),
                   onPressed: () {
                     //  Show the next page (101)
                     Navigator.pop(context);
                   },
+                  child: const Text(
+                    'NEXT',
+                  ),
                 ),
               ],
             ),
