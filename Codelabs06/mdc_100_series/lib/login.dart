@@ -88,6 +88,9 @@ class _LoginPageState extends State<LoginPage> {
                     //  Show the next page (101)
                     Navigator.pop(context);
                   },
+                  style: ElevatedButton.styleFrom(
+                    elevation: 8.0,
+                  ),
                   child: const Text(
                     'NEXT',
                   ),
