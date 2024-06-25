@@ -7,7 +7,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  intl: ^0.17.0
+  intl: ^0.19.0
 
   cupertino_icons: ^1.0.5
   shrine_images: ^2.0.2
@@ -15,10 +15,17 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^1.0.0
-
+  flutter_lints: ^4.0.0
+ 
 flutter:
   # TODO: Insert Fonts (103)
+  fonts:
+  - family: Rubik
+    fonts:
+      - asset: fonts/Rubik-Regular.ttf
+      - asset: fonts/Rubik-Medium.ttf
+        weight: 500
+
   uses-material-design: true
   assets:
     - assets/diamond.png
