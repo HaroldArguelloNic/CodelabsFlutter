@@ -5,10 +5,10 @@
 
    ✨Ingenieria en Sistemas de la Información ✨
 
-Docente: Ing. Luis Alberto Guido Calderón
-Estudiante: Harold José Arguello
+### Docente: Ing. Luis Alberto Guido Calderón
+### Estudiante: Harold José Arguello
 
-Acumulado para el 2do parcial:
+# Acumulado para el 2do parcial:
 
 1- Workshop: Dart null safety in Action - https://youtube.com/watch?v=HdKwuHQvArY
 Solucion: https://github.com/HaroldArguelloNic/CodelabsFlutter/tree/main/Codelabs01
